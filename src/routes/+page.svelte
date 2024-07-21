@@ -1,6 +1,12 @@
 <script>
 	import '../app.css';
+	import { title, description } from '$lib/config';
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+</svelte:head>
 
 <section class="flex flex-col gap-4 w-full h-screen justify-center items-center">
 	<h1 class="text-5xl">Welcome to <span class="font-bold text-orange-400">Svelte</span>Kit</h1>
