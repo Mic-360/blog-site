@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '../app.css';
+
 	import Ripple from '$lib/ripple.svelte';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
