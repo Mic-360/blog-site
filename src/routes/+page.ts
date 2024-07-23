@@ -4,7 +4,7 @@ import type { Blog } from '$lib/types';
 
 // we don't need any JS on this page, though we'll load
 // it in dev so that we get hot module replacement
-// export const csr = dev;
+export const csr = dev;
 
 export const load = (async ({ fetch }) => {
 	const res = await fetch('api/blogs');
