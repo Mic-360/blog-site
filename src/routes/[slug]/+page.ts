@@ -13,3 +13,7 @@ export const load = (async ({ params }) => {
 		throw new Error(`Failed to load ${params.slug}.md`);
 	}
 }) satisfies PageLoad;
+
+// since there's no dynamic data here, we can prerender
+// it so that it gets served as a static asset in production
+export const prerender = true;
