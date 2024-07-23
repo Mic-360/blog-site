@@ -13,8 +13,6 @@ thumbnail: https://media.licdn.com/dms/image/D4D0BAQGLG9fD9CKeuA/company-logo_20
 
 AFFiNE is an open source all in one workspace, an operating system for all the building blocks of your team wiki, knowledge management and digital assets and a better alternative to Notion and Miro.
 
-
-
 # You own your data, with no compromises
 
 ## Local-first & Real-time collaborative
@@ -22,8 +20,6 @@ AFFiNE is an open source all in one workspace, an operating system for all the b
 We love the idea proposed by Ink & Switch in the famous article about you owning your data, despite the cloud. Furthermore, AFFiNE is the first all-in-one workspace that keeps your data ownership with no compromises on real-time collaboration and editing experience.
 
 AFFiNE is a local-first application upon CRDTs with real-time collaboration support. Your data is always stored locally while multiple nodes remain synced in real-time.
-
-
 
 ### Blocks that assemble your next docs, tasks kanban or whiteboard
 
@@ -39,15 +35,13 @@ To Shape, not to adapt. AFFiNE is built for individuals & teams who care about t
 
 [Many editor apps ](http://notion.so)claimed to be a canvas for productivity. Since *the Mother of All Demos, *Douglas Engelbart, a creative and programable digital workspace has been a pursuit and an ultimate mission for generations of tool makers.
 
-
-
 "We shape our tools and thereafter our tools shape us”. A lot of pioneers have inspired us a long the way, e.g.:
 
-* Quip & Notion with their great concept of "everything is a block"
-* Trello with their Kanban
-* Airtable & Miro with their no-code programable datasheets
-* Miro & Whimiscal with their edgeless visual whiteboard
-* Remnote & Capacities with their object-based tag system
+- Quip & Notion with their great concept of "everything is a block"
+- Trello with their Kanban
+- Airtable & Miro with their no-code programable datasheets
+- Miro & Whimiscal with their edgeless visual whiteboard
+- Remnote & Capacities with their object-based tag system
 
 For more details, please refer to our [RoadMap](https://docs.affine.pro/docs/core-concepts/roadmap)
 
@@ -68,8 +62,6 @@ Self host AFFiNE
 ## Affine Development
 
 For developer or installation guides, please go to [AFFiNE Development](https://docs.affine.pro/docs/development/quick-start)
-
-
 
 [AFFiNE - All In One KnowledgeOS](https://affine.pro/)
 

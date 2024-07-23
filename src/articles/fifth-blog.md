@@ -13,10 +13,7 @@ thumbnail: https://media.licdn.com/dms/image/D4D0BAQGLG9fD9CKeuA/company-logo_20
 
 Hey friends
 
-
-
 ```ts title="Say hello to Shiki highlighting"
-
 import './markdown.css';
 import type { PageData } from './$types';
 import { author } from '$lib/config';

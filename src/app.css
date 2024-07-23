@@ -29,20 +29,20 @@
 	--font-sans: 'Manrope', sans-serif;
 	--font-mono: 'JetBrains Mono', monospace;
 
-	--shiki-color-background: #292D3E;
-	--shiki-color-text: #A6ACCD;
-	--shiki-token-keyword: #89DDFF;
-	--shiki-token-function: #82AAFF;
-	--shiki-token-string: #C3E88D;
-	--shiki-token-comment: #676E95;
-	--shiki-token-variable: #A6ACCD;
-	--shiki-token-type: #FFCB6B;
-	--shiki-token-constant: #89DDFF;
-	--shiki-token-parameter: #A6ACCD;
-	--shiki-token-punctuation: #89DDFF;
+	--shiki-color-background: #292d3e;
+	--shiki-color-text: #a6accd;
+	--shiki-token-keyword: #89ddff;
+	--shiki-token-function: #82aaff;
+	--shiki-token-string: #c3e88d;
+	--shiki-token-comment: #676e95;
+	--shiki-token-variable: #a6accd;
+	--shiki-token-type: #ffcb6b;
+	--shiki-token-constant: #89ddff;
+	--shiki-token-parameter: #a6accd;
+	--shiki-token-punctuation: #89ddff;
 	--shiki-token-link: #f07178;
 	--shiki-token-error: #f07178;
-	--shiki-token-string-expression: #89DDFF;
+	--shiki-token-string-expression: #89ddff;
 }
 
 * {
