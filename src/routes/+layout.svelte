@@ -6,11 +6,10 @@
 	import Footer from './Footer.svelte';
 </script>
 
-<div class="layout relative overflow-hidden bg-background md:shadow-xl rounded-lg">
+<div class="layout">
 	<Header />
 	<main>
 		<slot />
-
 		<Ripple />
 	</main>
 	<Footer />
@@ -21,6 +20,10 @@
 		display: grid;
 		grid-template-rows: auto 1fr auto;
 		min-height: 100vh;
+		position: relative;
+		overflow: hidden;
+		background-color: var(--background);
+		border-radius: 0.5rem;
 	}
 	main {
 		display: flex;
