@@ -1,16 +1,21 @@
 <script lang="ts">
 	import '../app.css';
+	import type { LayoutData } from './$types';
 
+	export let data: LayoutData;
 	import Ripple from '$lib/ripple.svelte';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
+	import Animate from './Animate.svelte';
 </script>
 
 <div class="layout">
 	<Header />
 	<main>
-		<slot />
-		<Ripple />
+		<Animate url={data.url}>
+			<slot />
+			<Ripple />
+		</Animate>
 	</main>
 	<Footer />
 </div>
