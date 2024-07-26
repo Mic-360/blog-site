@@ -45,15 +45,17 @@
 			</div>
 		</article>
 	{/each}
+	<div class="gradient-bottom"></div>
 </section>
 
 <style>
 	.blogs-section {
+		position: relative;
 		display: flex; /* flex */
 		flex-direction: column; /* flex-col */
 		gap: 1rem; /* gap-4 */
 		width: 100%; /* w-full */
-		height: 100vh; /* h-screen */
+		height: 100%; /* h-screen */
 		align-items: center; /* items-center */
 		padding: 2.5rem; /* p-10 */
 		overflow-y: scroll; /* overflow-y-scroll */
@@ -84,8 +86,8 @@
 	}
 
 	.blog-thumbnail {
-		height: 18rem; /* h-72 */
-		width: 18rem; /* w-72 */
+		height: auto; /* h-72 */
+		width: 50%; /* w-1/2 */
 		border-radius: 0.75rem; /* rounded-xl */
 	}
 
@@ -162,5 +164,15 @@
 
 	.author-date {
 		color: #6b7280; /* text-gray-500 */
+	}
+
+	.gradient-bottom {
+		pointer-events: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 33.3333%;
+		background: linear-gradient(to top, rgba(24, 24, 27, 0.7));
 	}
 </style>
