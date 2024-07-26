@@ -23,9 +23,6 @@
 						</h1>
 						<p class="blog-description">
 							{blog.description}
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur rerum quibusdam recusandae,
-							quas quam facilis culpa nobis obcaecati et nisi sequi aliquid sit reprehenderit temporibus,
-							ipsam exercitationem distinctio magnam consequuntur? Illum optio cupiditate iure!
 						</p>
 					</div>
 					<a href={blog.slug} class="read-more-link">
