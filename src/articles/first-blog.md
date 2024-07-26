@@ -162,10 +162,6 @@ Please follow the existing code style and conventions used in the project. Ensur
 
 Before submitting a pull request, make sure to test your changes thoroughly. If applicable, add new tests to cover your changes.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](../../LICENSE) file for more details.
-
 ---
 
 Thank you for contributing to the Blog Site! If you have any questions or need further assistance, feel free to reach out. Happy coding!
