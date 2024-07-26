@@ -1,3 +1,3 @@
-import Image from './image.svelte';
+import Image from './images.svelte';
 
 export { Image };
