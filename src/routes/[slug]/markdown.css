@@ -493,11 +493,20 @@
 }
 
 .markdown-body pre {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: var(--fontStack-monospace, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace);
-    font-size: 12px;
-    word-wrap: normal;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: var(
+		--fontStack-monospace,
+		ui-monospace,
+		SFMono-Regular,
+		SF Mono,
+		Menlo,
+		Consolas,
+		Liberation Mono,
+		monospace
+	);
+	font-size: 12px;
+	word-wrap: normal;
 }
 
 .markdown-body .octicon {

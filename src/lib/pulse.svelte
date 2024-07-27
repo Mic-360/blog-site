@@ -32,8 +32,8 @@
 
 	.relative-button {
 		position: relative;
-        background-color: transparent;
-        border: none;
+		background-color: transparent;
+		border: none;
 	}
 
 	.relative-content {

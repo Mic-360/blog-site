@@ -1,13 +1,13 @@
-import { description, title, url } from '$lib/config'
-import type { Blog } from '$lib/types.js'
+import { description, title, url } from '$lib/config';
+import type { Blog } from '$lib/types.js';
 
 export async function GET({ fetch }) {
-    const response = await fetch('api/blogs')
-    const blogs: Blog[] = await response.json()
+	const response = await fetch('api/blogs');
+	const blogs: Blog[] = await response.json();
 
-    const headers = { 'Content-Type': 'application/xml' }
+	const headers = { 'Content-Type': 'application/xml' };
 
-    const xml = `
+	const xml = `
 		<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 			<channel>
 				<title>${title}</title>
@@ -15,8 +15,8 @@ export async function GET({ fetch }) {
 				<link>${url}</link>
 				<atom:link href="${url}/rss.xml" rel="self" type="application/rss+xml"/>
 				${blogs
-            .map(
-                (blog) => `
+					.map(
+						(blog) => `
 						<item>
 							<title>${blog.title}</title>
 							<description>${blog.description}</description>
@@ -25,11 +25,11 @@ export async function GET({ fetch }) {
 							<pubDate>${new Date(blog.date).toUTCString()}</pubDate>
 						</item>
 					`
-            )
-            .join('')}
+					)
+					.join('')}
 			</channel>
 		</rss>
-	`.trim()
+	`.trim();
 
-    return new Response(xml, { headers })
+	return new Response(xml, { headers });
 }
