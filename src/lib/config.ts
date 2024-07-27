@@ -5,7 +5,7 @@ export const author = 'Bhaumic Singh';
 export const description =
 	'This is a blog site built with SvelteKit. Which covers the adventures of my developer journey. It is a place where I share my thoughts, ideas, and experiences.';
 export const version = '0.0.2';
-export const url = dev ? 'http://localhost:5173' : 'https://blog-site-steel-three.vercel.app';
+export const url = dev ? 'http://localhost:5173' : 'https://blog-bhaumics-projects.vercel.app';
 export const apiUrl = `${url}/api/blogs`;
 export const debug = dev ? true : false;
 export const log = dev ? true : false;
