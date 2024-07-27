@@ -20,7 +20,7 @@
 	<Footer />
 </div>
 
-<style lang="postcss">
+<style>
 	.layout {
 		display: grid;
 		grid-template-rows: auto 1fr auto;
@@ -30,10 +30,23 @@
 		background-color: var(--background);
 		border-radius: 0.5rem;
 	}
+
 	main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+
+	@media (max-width: 768px) {
+		main {
+			padding: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		main {
+			padding: 0.5rem;
+		}
 	}
 </style>

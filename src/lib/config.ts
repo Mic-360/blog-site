@@ -1,6 +1,6 @@
 import { dev } from '$app/environment';
 
-export const title = 'Homegrown Blogs';
+export const title = 'No-Nonsense Blogs';
 export const author = 'Bhaumic Singh';
 export const description =
 	'This is a blog site built with SvelteKit. Which covers the adventures of my developer journey. It is a place where I share my thoughts, ideas, and experiences.';

@@ -3,25 +3,34 @@
 </script>
 
 <header>
-	<div class="header-image-container">
-		<div class="header-image-overlay"></div>
-		<img src="./avatar.png" alt="logo" class="avatar" />
+	<div class="header-container">
+		<div class="header-image-container">
+			<div class="header-image-overlay"></div>
+			<img src="./avatar.png" alt="logo" class="avatar" />
+		</div>
+		<div class="header-title-container">
+			<h1 class="header-title">{title}</h1>
+			<span class="header-author-container">
+				- <a href={siteUrl} class="author-link">
+					{author}
+				</a>
+			</span>
+		</div>
+		<h3 class="header-version">Version: {version}</h3>
 	</div>
-	<h1 class="header-title">{title}</h1>
-	<span class="header-author-container">
-		- <a href={siteUrl} class="author-link">
-			{author}
-		</a>
-	</span>
 	<h2 class="header-description">{description}</h2>
-	<h3 class="header-version">Version: {version}</h3>
 </header>
 
 <style>
 	header {
+		display: flex; /* flex */
+		flex-direction: column; /* flex-col */
+		padding: 1rem; /* p-4 */
+		gap: 1rem; /* gap-4 */
+	}
+	.header-container {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		padding: 0.5rem;
 		gap: 0.5rem;
@@ -43,19 +52,22 @@
 	}
 
 	.avatar {
-		height: 7rem; /* h-28 */
+		height: 3.5rem; /* h-28 */
+	}
+
+	.header-title-container {
+		display: flex; /* flex */
+		flex-direction: column; /* flex-col */
 	}
 
 	.header-title {
-		font-size: 3rem; /* text-5xl */
+		font-size: 2.5rem; /* text-5xl */
 		font-weight: 600; /* font-semibold */
 		text-transform: uppercase; /* uppercase */
 	}
 
 	.header-author-container {
 		text-align: right; /* text-right */
-		width: 100vw; /* w-screen */
-		max-width: 28rem; /* max-w-md */
 	}
 
 	.author-link {
@@ -66,17 +78,51 @@
 		text-decoration: underline; /* hover:underline */
 	}
 
+	.header-version {
+		text-align: right; /* text-right */
+		font-weight: 700; /* font-bold */
+	}
+
 	.header-description {
-		max-width: 40rem; /* max-w-screen-sm */
+		margin: 0 auto;
+		padding: 0 10rem;
 		text-align: center; /* text-center */
 		font-size: medium;
 		font-weight: 400;
 	}
 
-	.header-version {
-		text-align: right; /* text-right */
-		width: 100vw; /* w-screen */
-		max-width: 28rem; /* max-w-md */
-		font-weight: 700; /* font-bold */
+	/* Media Queries for responsiveness */
+	@media (max-width: 768px) {
+		.header-container {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.header-title {
+			font-size: 2rem; /* text-4xl */
+		}
+
+		.header-version {
+			text-align: center;
+		}
+
+		.header-description {
+			padding: 0 2rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.header-title {
+			font-size: 1.5rem; /* text-3xl */
+		}
+
+		.avatar {
+			height: 2.5rem; /* h-20 */
+		}
+
+		.header-description {
+			padding: 0 1rem;
+		}
 	}
 </style>

@@ -19,21 +19,21 @@
 			const copyPrompt = document.createElement('div');
 			copyPrompt.className = 'copy-prompt';
 			copyPrompt.style.cssText = `
-            position: absolute;
-            top: 6px;
-            right: 8px;
-            cursor: pointer;
-        `;
+				position: absolute;
+				top: 6px;
+				right: 8px;
+				cursor: pointer;
+			`;
 
 			const copyIcon = document.createElement('img');
 			copyIcon.src = '/copy.svg';
 			copyIcon.alt = 'Copy code';
 			copyIcon.style.cssText = `
-            width: 15px;
-            border: 1px solid var(--border);
-            border-radius: 3px;
-            padding: 2px;
-		`; // Adjust size as needed
+				width: 15px;
+				border: 1px solid var(--border);
+				border-radius: 3px;
+				padding: 2px;
+			`; // Adjust size as needed
 
 			copyPrompt.appendChild(copyIcon);
 			block.appendChild(copyPrompt);
@@ -129,12 +129,15 @@
 		max-width: 1024px;
 		margin: 2.5rem auto;
 	}
+
 	.article-title {
 		font-size: 3rem; /* text-5xl */
 	}
 
 	.tags-container {
-		display: flex; /* flex */
+		display: grid;
+		grid-auto-flow: column;
+		justify-content: start;
 		gap: 0.5rem; /* gap-x-2 */
 		padding: 0.5rem 0.1rem; /* py-4 px-2 */
 	}
@@ -161,5 +164,65 @@
 	.tag-icon {
 		transform: rotate(90deg); /* rotate-90 */
 		margin-top: 0.15rem; /* mt-[0.15rem] */
+	}
+
+	/* Media Queries for Responsiveness */
+	@media (max-width: 1024px) {
+		article {
+			width: 90%;
+		}
+
+		.article-title {
+			font-size: 2.5rem; /* text-4xl */
+		}
+	}
+
+	@media (max-width: 768px) {
+		article {
+			width: 95%;
+		}
+
+		.article-title {
+			font-size: 2rem; /* text-3xl */
+		}
+
+		.tag-link {
+			padding: 0.2rem 0.4rem; /* px-1 */
+		}
+
+		.tag-text {
+			font-size: 0.7rem; /* text-sm */
+		}
+	}
+
+	@media (max-width: 480px) {
+		.article-title {
+			font-size: 1.5rem; /* text-2xl */
+		}
+
+		.tag-link {
+			padding: 0.1rem 0.3rem; /* px-0.5 */
+		}
+
+		.tag-text {
+			font-size: 0.6rem; /* text-xs */
+		}
+	}
+
+	/* Responsive tags-container */
+	@media (max-width: 768px) {
+		.tags-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.tags-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	}
 </style>
