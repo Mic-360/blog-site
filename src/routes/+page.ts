@@ -16,28 +16,3 @@ export const load = (async ({ fetch }) => {
 // it so that it gets served as a static asset in production
 export const prerender = true;
 
-export const _metadata = {
-	title: 'page',
-	description: 'page',
-	keywords: 'page',
-	image: 'page',
-	url: 'page',
-	type: 'page',
-	siteName: 'page',
-	locale: 'en',
-	twitter: {
-		card: 'summary',
-		site: 'page',
-		creator: 'page',
-		title: 'page',
-		description: 'page',
-		image: 'page'
-	},
-	og: {
-		title: 'page',
-		description: 'page',
-		image: 'page',
-		url: 'page',
-		type: 'page'
-	}
-};
