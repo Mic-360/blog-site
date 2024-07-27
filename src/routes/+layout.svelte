@@ -4,9 +4,7 @@
 
 	export let data: LayoutData;
 	import { Ripple } from '../components';
-	import Header from './Header.svelte';
-	import Footer from './Footer.svelte';
-	import Animate from './Animate.svelte';
+	import { Header, Footer, Animate } from '../components';
 </script>
 
 <div class="layout">
