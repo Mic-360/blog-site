@@ -3,7 +3,7 @@
 	import type { LayoutData } from './$types';
 
 	export let data: LayoutData;
-	import Ripple from '$lib/ripple.svelte';
+	import { Ripple } from '../components';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
 	import Animate from './Animate.svelte';

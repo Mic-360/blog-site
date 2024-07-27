@@ -3,7 +3,7 @@
 	import type { PageData } from './$types';
 	import { ArrowUpRight } from 'lucide-svelte';
 	import { formatDate } from '$lib/utils';
-	import Pulse from '$lib/pulse.svelte';
+	import { Pulse } from '../components';
 	export let data: PageData;
 </script>
 
