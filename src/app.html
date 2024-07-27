@@ -8,9 +8,14 @@
 		<link rel="alternate" href="/rss.xml" type="application/atom+xml" title="Atom" />
 		<link rel="manifest" crossorigin="use-credentials" href="/manifest.webmanifest" />
 		%sveltekit.head%
+		<style>
+			.content {
+				display: contents;
+			}
+		</style>
 	</head>
 
 	<body data-sveltekit-preload-data="hover" class="dark">
-		<div style="display: contents">%sveltekit.body%</div>
+		<div class="content">%sveltekit.body%</div>
 	</body>
 </html>
