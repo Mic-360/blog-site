@@ -38,11 +38,11 @@ const updatedConfigFileContent = configFileContent.replace(
 );
 fs.writeFileSync(configFilePath, updatedConfigFileContent, 'utf8');
 
-// // Commit and tag the changes
-// execSync('git add package.json ./src/lib/config.ts');
-// execSync(`git commit -m "Release v${newVersion}"`);
-// execSync(`git tag v${newVersion}`);
+// Commit and tag the changes
+execSync('git add package.json ./src/lib/config.ts');
+execSync(`git commit -m "Release v${newVersion}"`);
+execSync(`git tag v${newVersion}`);
 
-// // Push changes and tags
-// execSync('git push');
-// execSync('git push --tags');
+// Push changes and tags
+execSync('git push');
+execSync('git push --tags');
