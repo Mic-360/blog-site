@@ -1,6 +1,8 @@
 import { description, title, url } from '$lib/config';
 import type { Blog } from '$lib/types.js';
 
+export const prerender = true;
+
 export async function GET({ fetch }) {
 	const response = await fetch('api/blogs');
 	const blogs: Blog[] = await response.json();
