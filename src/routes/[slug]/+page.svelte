@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './markdown.css';
 	import type { PageData } from './$types';
-	import { author } from '$lib/config';
+	import { author, url } from '$lib/config';
 	import copy from 'copy-to-clipboard';
 	import { onMount } from 'svelte';
 
@@ -81,7 +81,7 @@
 	<meta property="og:title" content={data.meta.title} />
 	<meta property="og:description" content={data.meta.description} />
 	<meta property="og:image" content={data.meta.thumbnail} />
-	<meta property="og:url" content="https://example.com/{data.meta.slug}" />
+	<meta property="og:url" content="{url}/{data.meta.slug}" />
 	<meta property="og:type" content="website" />
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:title" content={data.meta.title} />

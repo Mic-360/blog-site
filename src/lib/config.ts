@@ -5,11 +5,11 @@ export const author = 'Bhaumic Singh';
 export const description =
 	'This is a blog site built with SvelteKit. Which covers the adventures of my developer journey. It is a place where I share my thoughts, ideas, and experiences.';
 export const version = '0.0.2';
-export const apiUrl = 'https://api.example.com';
-export const debug = false;
-export const log = true;
+export const url = dev ? 'http://localhost:5173' : 'https://blog-site-steel-three.vercel.app';
+export const apiUrl = `${url}/api/blogs`;
+export const debug = dev ? true : false;
+export const log = dev ? true : false;
 export const siteUrl = 'https://bhaumic.me/';
-export const url = dev ? 'http://localhost:5173' : 'https://example.com';
 export const socials = {
 	website: siteUrl,
 	github: 'https://github.com/mic-360',
