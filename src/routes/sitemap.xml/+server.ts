@@ -1,6 +1,8 @@
 import { routes } from '$lib/routes';
 import type { RequestHandler } from '@sveltejs/kit';
 
+export const prerender = true;
+
 export const GET: RequestHandler = async () => {
 	const headers = { 'Content-Type': 'application/xml' };
 
