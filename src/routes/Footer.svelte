@@ -36,6 +36,15 @@
 				<a href={socials.telegram}>
 					<Send />
 				</a>
+				<a
+					href="http://validator.w3.org/feed/check.cgi?url=https%3A//blog-site-steel-three.vercel.app/rss.xml"
+					><img
+						src="https://validator.w3.org/feed/images/valid-rss-rogers.png"
+						alt="[Valid RSS]"
+						title="Validate my RSS feed"
+						class="rss"
+					/></a
+				>
 			</ul>
 		</div>
 	</div>
@@ -99,6 +108,10 @@
 		display: flex; /* flex */
 		justify-content: flex-start; /* justify-start */
 		gap: 0 1rem; /* gap-4 */
+	}
+
+	.rss {
+		height: 1.5rem; /* h-6 */
 	}
 
 	/* Media Queries */
