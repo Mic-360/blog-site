@@ -111,7 +111,7 @@
 						d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"
 					/><circle cx="7.5" cy="7.5" r=".5" fill={getRandomColor()} /></svg
 				>
-				<span class="tag-text">{tags}</span>
+				<span class="tag-text">{tags} |</span>
 			</a>
 		{/each}
 	</div>
@@ -146,14 +146,7 @@
 		display: flex; /* flex */
 		align-items: center; /* items-center */
 		gap: 0.25rem; /* gap-x-1 */
-		border: 0.5px solid; /* border */
-		padding: 0.2rem 0.5rem; /* px-2 */
 		border-radius: 0.75rem; /* rounded-xl */
-		background: linear-gradient(
-			to right,
-			rgba(71, 85, 105, 0.8),
-			rgba(71, 85, 105, 0.1)
-		); /* bg-gradient-to-r from-slate-600/80 */
 	}
 
 	.tag-text {

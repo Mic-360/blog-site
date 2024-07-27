@@ -88,7 +88,7 @@
 		margin-bottom: 1rem;
 		border: 0.1rem solid #4b5563;
 		padding: 0.5rem;
-		width: 20rem;
+		width: 30%;
 		border-radius: 2rem;
 		background-color: rgba(24, 24, 27, 0.3);
 		color: white;
@@ -287,6 +287,10 @@
 	}
 
 	@media (max-width: 768px) {
+		.search-bar {
+			width: 50%;
+		}
+
 		.blog-details {
 			align-items: flex-start;
 		}
@@ -319,6 +323,10 @@
 	}
 
 	@media (max-width: 480px) {
+		.search-bar {
+			width: 75%;
+		}
+
 		.blog-details {
 			align-items: flex-start;
 		}
