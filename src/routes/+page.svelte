@@ -5,6 +5,34 @@
 	import { formatDate } from '$lib/utils';
 	import { Pulse } from '../components';
 	export let data: PageData;
+	export let searchTerm = '';
+	export let currentPage = 1;
+	export const itemsPerPage = 5;
+
+	$: filteredBlogs = data.blogs.filter((blog) => {
+		const lowerCaseSearchTerm = searchTerm.toLowerCase();
+		return (
+			blog.title.toLowerCase().includes(lowerCaseSearchTerm) ||
+			blog.tags.some((tag) => tag.toLowerCase().includes(lowerCaseSearchTerm))
+		);
+	});
+
+	$: paginatedBlogs = filteredBlogs.slice(
+		(currentPage - 1) * itemsPerPage,
+		currentPage * itemsPerPage
+	);
+
+	function nextPage() {
+		if (currentPage * itemsPerPage < filteredBlogs.length) {
+			currentPage += 1;
+		}
+	}
+
+	function prevPage() {
+		if (currentPage > 1) {
+			currentPage -= 1;
+		}
+	}
 </script>
 
 <svelte:head>
@@ -13,7 +41,8 @@
 </svelte:head>
 
 <section class="blogs-section">
-	{#each data.blogs as blog}
+	<input type="text" placeholder="Search blogs..." bind:value={searchTerm} class="search-bar" />
+	{#each paginatedBlogs as blog}
 		<article class="blog-article">
 			<div class="blog-content">
 				<img src={blog.thumbnail} alt={blog.tags[0]} class="blog-thumbnail" />
@@ -45,10 +74,52 @@
 			</div>
 		</article>
 	{/each}
+	<div class="pagination">
+		<button on:click={prevPage} disabled={currentPage === 1}>Previous</button>
+		<button on:click={nextPage} disabled={currentPage * itemsPerPage >= filteredBlogs.length}
+			>Next</button
+		>
+	</div>
 	<div class="gradient-bottom"></div>
 </section>
 
 <style>
+	.search-bar {
+		margin-bottom: 1rem;
+		border: 0.1rem solid #4b5563;
+		padding: 0.5rem;
+		width: 20rem;
+		border-radius: 2rem;
+		background-color: rgba(24, 24, 27, 0.3);
+		color: white;
+		box-shadow:
+			0 4px 8px rgba(0, 0, 0, 0.4),
+			0 6px 20px rgba(0, 0, 0, 0.01);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+	}
+
+	.pagination {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1rem;
+		gap: 1rem;
+	}
+
+	.pagination button {
+		border-radius: 2rem;
+		padding: 0.5rem 1rem;
+		background-color: transparent;
+		color: white;
+		border: 0.1rem solid #4b5563;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		box-shadow:
+			0 4px 8px rgba(0, 0, 0, 0.4),
+			0 6px 20px rgba(0, 0, 0, 0.01);
+	}
+
 	.blogs-section {
 		position: relative;
 		display: flex;
