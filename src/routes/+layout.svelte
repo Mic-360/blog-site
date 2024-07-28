@@ -5,7 +5,14 @@
 	export let data: LayoutData;
 	import { Ripple } from '../components';
 	import { Header, Footer, Animate } from '../components';
+	export const structuredData = JSON.stringify(data.structuredData);
 </script>
+
+<svelte:head>
+	<script type="application/ld+json">
+{structuredData}
+	</script>
+</svelte:head>
 
 <div class="layout">
 	<Header />
