@@ -2,6 +2,7 @@ import { dev } from '$app/environment';
 
 export const title = 'No-Nonsense Blogs';
 export const author = 'Bhaumic Singh';
+export const avatar = './avatar-no-bg.png';
 export const description =
 	'This is a blog site built with SvelteKit. Which covers the adventures of my developer journey. It is a place where I share my thoughts, ideas, and experiences.';
 export const version = '0.0.4';
@@ -9,9 +10,8 @@ export const url = dev ? 'http://localhost:5173' : 'https://blog-bhaumics-projec
 export const apiUrl = `${url}/api/blogs`;
 export const debug = dev ? true : false;
 export const log = dev ? true : false;
-export const siteUrl = 'https://bhaumic.me/';
 export const socials = {
-	website: siteUrl,
+	website: 'https://bhaumic.me/',
 	github: 'https://github.com/mic-360',
 	linkedin: 'https://www.linkedin.com/in/bhaumic/',
 	mail: 'mailto:bhaumiksingh2000@gmail.com',
