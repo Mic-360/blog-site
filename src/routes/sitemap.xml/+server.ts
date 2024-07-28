@@ -1,3 +1,4 @@
+import { url } from '$lib/config';
 import { routes } from '$lib/routes';
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -13,7 +14,7 @@ export const GET: RequestHandler = async () => {
 							.map(
 								(route) => `
                     <url>
-                        <loc>${new URL(route.path, 'https://yourdomain.com').href}</loc>
+                        <loc>${new URL(route.path, url).href}</loc>
                         <lastmod>${new Date(route.lastmod).toISOString()}</lastmod>
                         <changefreq>${route.changefreq}</changefreq>
                         <priority>${route.priority}</priority>

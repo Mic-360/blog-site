@@ -17,5 +17,12 @@ export const routes = [
 	{ path: '/', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 1.0 },
 	{ path: '/api/blogs', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 0.8 },
 	{ path: '/rss.xml', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.6 },
+	{
+		path: '/manifest.webmanifest',
+		lastmod: new Date().toISOString(),
+		changefreq: 'monthly',
+		priority: 0.6
+	},
+	{ path: '/robots.txt', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.6 },
 	...(await dynamicRoutes())
 ];
