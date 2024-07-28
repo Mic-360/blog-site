@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { title, description, author } from '$lib/config';
+	import { title, description, author, url, avatar } from '$lib/config';
 	import type { PageData } from './$types';
 	import { ArrowUpRight } from 'lucide-svelte';
 	import { formatDate } from '$lib/utils';
@@ -38,6 +38,17 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={description} />
+	<meta name="keywords" content="svelte, sveltekit, blog, web development" />
+	<meta name="author" content={url} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={url} />
+	<meta property="og:image" content={avatar} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={avatar} />
 </svelte:head>
 
 <section class="blogs-section">
@@ -64,7 +75,7 @@
 						</Pulse>
 					</a>
 					<div class="author-info">
-						<img class="author-avatar" src="/avatar.png" alt={author} />
+						<img class="author-avatar" src={avatar} alt={author} />
 						<div class="author-details">
 							<p class="author-name">{author}</p>
 							<p class="author-date">{formatDate(blog.date)}</p>

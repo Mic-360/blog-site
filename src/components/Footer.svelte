@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { author, socials, about } from '$lib/config';
+	import { author, socials, about, avatar } from '$lib/config';
 	import { Facebook, House, Send, Instagram, Mail, Linkedin, Github } from 'lucide-svelte';
 </script>
 
@@ -8,7 +8,7 @@
 	<div class="about-container">
 		<div class="image-container">
 			<div class="image-overlay"></div>
-			<img src="./avatar.png" alt="logo" class="avatar" />
+			<img src={avatar} alt="logo" class="avatar" />
 		</div>
 		<div class="about-text-container">
 			<p class="about-text">
@@ -90,7 +90,8 @@
 	}
 
 	.avatar {
-		height: 7rem; /* h-28 */
+		height: 9rem; /* h-36 */
+		border-radius: 9999px; /* rounded-full */
 	}
 
 	.about-text-container {
@@ -124,6 +125,7 @@
 
 		.avatar {
 			height: 5rem; /* h-20 */
+			border-radius: 9999px; /* rounded-full */
 		}
 
 		.about-text-container {
@@ -147,6 +149,7 @@
 
 		.avatar {
 			height: 4rem; /* h-16 */
+			border-radius: 9999px; /* rounded-full */
 		}
 
 		.about-text-container {

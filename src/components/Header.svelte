@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { title, description, version, author, siteUrl } from '$lib/config';
+	import { title, description, version, author, socials, avatar } from '$lib/config';
 </script>
 
 <header>
 	<div class="header-container">
 		<div class="header-image-container">
 			<div class="header-image-overlay"></div>
-			<img src="./avatar.png" alt="logo" class="avatar" />
+			<img src={avatar} alt="logo" class="avatar" />
 		</div>
 		<div class="header-title-container">
 			<h1 class="header-title">{title}</h1>
 			<span class="header-author-container">
-				- <a href={siteUrl} class="author-link">
+				- <a href={socials.website} class="author-link">
 					{author}
 				</a>
 			</span>
@@ -52,7 +52,8 @@
 	}
 
 	.avatar {
-		height: 3.5rem; /* h-28 */
+		height: 7rem; /* h-28 */
+		border-radius: 9999px; /* rounded-full */
 	}
 
 	.header-title-container {
@@ -118,7 +119,7 @@
 		}
 
 		.avatar {
-			height: 2.5rem; /* h-20 */
+			height: 4rem; /* h-20 */
 		}
 
 		.header-description {
