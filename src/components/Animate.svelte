@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { blur } from 'svelte/transition';
-	export let url = '';
+  import { blur } from 'svelte/transition';
+  export let url = '';
 </script>
 
 {#key url}
-	<div class="transition" transition:blur={{ amount: 25 }}>
-		<slot />
-	</div>
+  <div class="transition" transition:blur={{ amount: 25 }}>
+    <slot />
+  </div>
 {/key}
 
 <style>
-	.transition {
-		height: 100%;
-	}
+  .transition {
+    height: 100%;
+  }
 </style>

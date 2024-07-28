@@ -2,72 +2,72 @@
 @import '@fontsource/jetbrains-mono';
 
 :root {
-	--background: 240 10% 3.9%;
-	--foreground: 0 0% 98%;
-	--card: 240 10% 3.9%;
-	--card-foreground: 0 0% 98%;
-	--popover: 240 10% 3.9%;
-	--popover-foreground: 0 0% 98%;
-	--primary: 0 0% 98%;
-	--primary-foreground: 240 5.9% 10%;
-	--secondary: 240 3.7% 15.9%;
-	--secondary-foreground: 0 0% 98%;
-	--muted: 240 3.7% 15.9%;
-	--muted-foreground: 240 5% 64.9%;
-	--accent: 240 3.7% 15.9%;
-	--accent-foreground: 0 0% 98%;
-	--destructive: 0 62.8% 30.6%;
-	--destructive-foreground: 0 0% 98%;
-	--border: 240 3.7% 15.9%;
-	--input: 240 3.7% 15.9%;
-	--ring: 240 4.9% 83.9%;
-	--chart-1: 220 70% 50%;
-	--chart-2: 160 60% 45%;
-	--chart-3: 30 80% 55%;
-	--chart-4: 280 65% 60%;
-	--chart-5: 340 75% 55%;
-	--font-sans: 'Manrope', sans-serif;
-	--font-mono: 'JetBrains Mono', monospace;
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+  --font-sans: 'Manrope', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
-	--shiki-color-background: #292d3e;
-	--shiki-color-text: #a6accd;
-	--shiki-token-keyword: #89ddff;
-	--shiki-token-function: #82aaff;
-	--shiki-token-string: #c3e88d;
-	--shiki-token-comment: #676e95;
-	--shiki-token-variable: #a6accd;
-	--shiki-token-type: #ffcb6b;
-	--shiki-token-constant: #89ddff;
-	--shiki-token-parameter: #a6accd;
-	--shiki-token-punctuation: #89ddff;
-	--shiki-token-link: #f07178;
-	--shiki-token-error: #f07178;
-	--shiki-token-string-expression: #89ddff;
+  --shiki-color-background: #292d3e;
+  --shiki-color-text: #a6accd;
+  --shiki-token-keyword: #89ddff;
+  --shiki-token-function: #82aaff;
+  --shiki-token-string: #c3e88d;
+  --shiki-token-comment: #676e95;
+  --shiki-token-variable: #a6accd;
+  --shiki-token-type: #ffcb6b;
+  --shiki-token-constant: #89ddff;
+  --shiki-token-parameter: #a6accd;
+  --shiki-token-punctuation: #89ddff;
+  --shiki-token-link: #f07178;
+  --shiki-token-error: #f07178;
+  --shiki-token-string-expression: #89ddff;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 body {
-	background-color: hsl(var(--background));
-	color: hsl(var(--foreground));
-	font-family: var(--font-sans);
-	-ms-overflow-style: none;
-	scrollbar-width: none;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }

@@ -6,7 +6,7 @@ import type { RequestHandler } from './$types';
 export const prerender = true;
 
 const generateRobotsTxt = (Url: string): string =>
-	`
+  `
 User-agent: *
 Disallow: /admin/
 Disallow: /login/
@@ -17,19 +17,19 @@ Sitemap: ${Url}/sitemap.xml
 `.trim();
 
 export const GET: RequestHandler = async ({ setHeaders }) => {
-	try {
-		const robotsTxt = generateRobotsTxt(url);
+  try {
+    const robotsTxt = generateRobotsTxt(url);
 
-		setHeaders({
-			'Content-Type': 'text/plain',
-			'Cache-Control': 'max-age=0, s-max-age=600',
-			Pragma: 'no-cache', // HTTP 1.0 backward compatibility
-			Expires: '0' // Ensures immediate expiration
-		});
+    setHeaders({
+      'Content-Type': 'text/plain',
+      'Cache-Control': 'max-age=0, s-max-age=600',
+      Pragma: 'no-cache', // HTTP 1.0 backward compatibility
+      Expires: '0', // Ensures immediate expiration
+    });
 
-		return new Response(robotsTxt, { status: 200 });
-	} catch (error) {
-		console.error('Error generating robots.txt:', error);
-		return new Response('Internal Server Error', { status: 500 });
-	}
+    return new Response(robotsTxt, { status: 200 });
+  } catch (error) {
+    console.error('Error generating robots.txt:', error);
+    return new Response('Internal Server Error', { status: 500 });
+  }
 };

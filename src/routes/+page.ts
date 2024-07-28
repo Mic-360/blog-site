@@ -7,9 +7,9 @@ import type { Blog } from '$lib/types';
 export const csr = dev;
 
 export const load = (async ({ fetch }) => {
-	const res = await fetch('api/blogs');
-	const blogs: Blog[] = await res.json();
-	return { blogs };
+  const res = await fetch('api/blogs');
+  const blogs: Blog[] = await res.json();
+  return { blogs };
 }) satisfies PageLoad;
 
 // since there's no dynamic data here, we can prerender

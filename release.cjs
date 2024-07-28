@@ -8,17 +8,17 @@ const configFilePath = path.join(__dirname, './src/lib/config.ts');
 
 // Function to increment the version number
 function incrementVersion(version) {
-	const versionParts = version.split('.').map(Number);
-	versionParts[2]++; // Increment patch version
-	if (versionParts[2] >= 10) {
-		versionParts[2] = 0;
-		versionParts[1]++; // Increment minor version
-	}
-	if (versionParts[1] >= 10) {
-		versionParts[1] = 0;
-		versionParts[0]++; // Increment major version
-	}
-	return versionParts.join('.');
+  const versionParts = version.split('.').map(Number);
+  versionParts[2]++; // Increment patch version
+  if (versionParts[2] >= 10) {
+    versionParts[2] = 0;
+    versionParts[1]++; // Increment minor version
+  }
+  if (versionParts[1] >= 10) {
+    versionParts[1] = 0;
+    versionParts[0]++; // Increment major version
+  }
+  return versionParts.join('.');
 }
 
 // Read and update package.json
@@ -33,8 +33,8 @@ console.log(`Version updated from ${oldVersion} to ${newVersion}`);
 // Update the config file
 const configFileContent = fs.readFileSync(configFilePath, 'utf8');
 const updatedConfigFileContent = configFileContent.replace(
-	/export const version = '.*';/,
-	`export const version = '${newVersion}';`
+  /export const version = '.*';/,
+  `export const version = '${newVersion}';`
 );
 fs.writeFileSync(configFilePath, updatedConfigFileContent, 'utf8');
 
