@@ -5,7 +5,7 @@ export const author = 'Bhaumic Singh';
 export const avatar = './avatar-no-bg.png';
 export const description =
   'This is a blog site built with SvelteKit. Which covers the adventures of my developer journey. It is a place where I share my thoughts, ideas, and experiences.';
-export const version = '0.0.4';
+export const version = '0.0.5';
 export const url = dev
   ? 'http://localhost:5173'
   : 'https://blog-bhaumics-projects.vercel.app';
